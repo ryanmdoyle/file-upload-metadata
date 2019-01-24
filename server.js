@@ -2,6 +2,7 @@
 
 var express = require('express');
 var cors = require('cors');
+const multer = require("multer");
 
 // require and use "multer"...
 
@@ -17,6 +18,8 @@ app.get('/', function (req, res) {
 app.get('/hello', function(req, res){
   res.json({greetings: "Hello, API"});
 });
+
+app.post('/')
 
 app.listen(process.env.PORT || 3000, function () {
   console.log('Node.js listening ...');
